@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sohojatri | Congratulations</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<style>
+
+/* =====================================================
+   BASIC
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins','Noto Sans Bengali',sans-serif;
+
+    background:#f1f3f6;
+
+    min-height:100vh;
+
+    padding:25px 15px;
+}
+
+
+/* =====================================================
+   CONTROL PANEL
+===================================================== */
+
+.controls{
+
+    max-width:900px;
+
+    margin:0 auto 25px;
+
+    padding:18px;
+
+    background:#ffffff;
+
+    border:1px solid #e4e7eb;
+
+    border-radius:14px;
+
+    display:flex;
+
+    gap:14px;
+
+    align-items:end;
+
+    flex-wrap:wrap;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.07);
+}
+
+.control{
+    flex:1;
+    min-width:220px;
+}
+
+.control label{
+
+    display:block;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    color:#17365f;
+
+    margin-bottom:7px;
+}
+
+.control input{
+
+    width:100%;
+
+    padding:12px 13px;
+
+    border:1px solid #d9dee6;
+
+    border-radius:9px;
+
+    outline:none;
+
+    font-family:inherit;
+
+    background:#fff;
+}
+
+.control input:focus{
+
+    border-color:#c99a3a;
+
+    box-shadow:
+        0 0 0 3px rgba(201,154,58,.10);
+}
+
+.btn{
+
+    border:0;
+
+    padding:13px 19px;
+
+    border-radius:9px;
+
+    font-family:inherit;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    white-space:nowrap;
+}
+
+.btn:hover{
+
+    transform:translateY(-1px);
+}
+
+.save{
+
+    background:#c29332;
+
+    color:white;
+}
+
+.print{
+
+    background:#102f59;
+
+    color:white;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.card-wrap{
+
+    width:100%;
+
+    max-width:900px;
+
+    margin:auto;
+}
+
+.card{
+
+    position:relative;
+
+    width:100%;
+
+    max-width:720px;
+
+    margin:auto;
+
+    aspect-ratio:4/5;
+
+    overflow:hidden;
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    border:1px solid #e4e5e8;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.14);
+}
+
+
+/* =====================================================
+   SIMPLE TOP BAR
+===================================================== */
+
+.top-bar{
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:8px;
+
+    background:#102f59;
+}
+
+.top-gold{
+
+    position:absolute;
+
+    top:8px;
+
+    left:0;
+
+    width:100%;
+
+    height:3px;
+
+    background:#d0a044;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header{
+
+    position:relative;
+
+    z-index:2;
+
+    padding:38px 48px 0;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+.logo{
+
+    font-size:28px;
+
+    font-weight:800;
+
+    color:#102f59;
+
+    letter-spacing:-1px;
+}
+
+.logo span{
+
+    color:#cc1f60;
+}
+
+.tagline{
+
+    font-size:8px;
+
+    color:#8b929b;
+
+    letter-spacing:1.5px;
+
+    margin-top:-2px;
+}
+
+.header-right{
+
+    font-size:9px;
+
+    font-weight:700;
+
+    color:#c09537;
+
+    letter-spacing:1.4px;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.title{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+    margin-top:45px;
+}
+
+.small-title{
+
+    font-size:10px;
+
+    letter-spacing:3px;
+
+    color:#9a9fa6;
+
+    font-weight:600;
+}
+
+.congratulations{
+
+    margin-top:4px;
+
+    font-family:'Noto Sans Bengali',sans-serif;
+
+    font-size:58px;
+
+    font-weight:800;
+
+    line-height:1.15;
+
+    color:#c91f5d;
+}
+
+.line{
+
+    width:100px;
+
+    height:2px;
+
+    margin:10px auto;
+
+    background:#c99b3d;
+}
+
+.subtitle{
+
+    font-family:'Noto Sans Bengali',sans-serif;
+
+    font-size:14px;
+
+    color:#5d6672;
+}
+
+
+/* =====================================================
+   PHOTO
+===================================================== */
+
+.photo-area{
+
+    position:relative;
+
+    z-index:3;
+
+    width:225px;
+
+    margin:30px auto 0;
+}
+
+.photo-frame{
+
+    width:210px;
+
+    height:210px;
+
+    margin:auto;
+
+    padding:6px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    border:2px solid #d1a346;
+
+    box-shadow:
+        0 7px 22px rgba(0,0,0,.10);
+}
+
+.photo-inner{
+
+    width:100%;
+
+    height:100%;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    background:#f3f5f7;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+}
+
+.photo-inner img{
+
+    display:none;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+}
+
+.placeholder{
+
+    text-align:center;
+
+    color:#9aa1aa;
+}
+
+.placeholder-icon{
+
+    display:block;
+
+    font-size:42px;
+
+    margin-bottom:4px;
+}
+
+.placeholder-text{
+
+    font-size:9px;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+}
+
+
+/* =====================================================
+   VERIFIED BADGE
+===================================================== */
+
+.badge{
+
+    position:absolute;
+
+    right:2px;
+
+    bottom:8px;
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:#102f59;
+
+    border:4px solid #fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#e0b34e;
+
+    font-size:18px;
+
+    box-shadow:
+        0 5px 12px rgba(0,0,0,.13);
+}
+
+
+/* =====================================================
+   NAME
+===================================================== */
+
+.name-area{
+
+    position:relative;
+
+    z-index:3;
+
+    text-align:center;
+
+    margin-top:20px;
+}
+
+.name{
+
+    font-size:28px;
+
+    font-weight:800;
+
+    color:#102f59;
+}
+
+.name-line{
+
+    width:130px;
+
+    height:2px;
+
+    background:#d1a347;
+
+    margin:7px auto;
+}
+
+.member{
+
+    font-family:'Noto Sans Bengali',sans-serif;
+
+    color:#c91f5d;
+
+    font-size:12px;
+
+    font-weight:700;
+}
+
+
+/* =====================================================
+   MESSAGE
+===================================================== */
+
+.message{
+
+    position:relative;
+
+    z-index:3;
+
+    width:78%;
+
+    margin:19px auto 0;
+
+    text-align:center;
+}
+
+.message p{
+
+    font-family:'Noto Sans Bengali',sans-serif;
+
+    font-size:12px;
+
+    line-height:1.85;
+
+    color:#5a6573;
+}
+
+.message strong{
+
+    color:#c91f5d;
+}
+
+.message .strong-line{
+
+    margin-top:5px;
+
+    color:#18375f;
+
+    font-weight:700;
+}
+
+
+/* =====================================================
+   SERVICES
+===================================================== */
+
+.services{
+
+    position:relative;
+
+    z-index:3;
+
+    width:76%;
+
+    margin:18px auto 0;
+
+    padding:12px 5px;
+
+    border-top:1px solid #e5e6e8;
+
+    border-bottom:1px solid #e5e6e8;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+}
+
+.service{
+
+    text-align:center;
+
+    border-right:1px solid #e5e6e8;
+}
+
+.service:last-child{
+
+    border-right:none;
+}
+
+.icon{
+
+    font-size:18px;
+
+    margin-bottom:3px;
+}
+
+.service-title{
+
+    font-size:8px;
+
+    font-weight:700;
+
+    color:#19375d;
+}
+
+.service-sub{
+
+    font-size:6px;
+
+    color:#969da5;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer{
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:100%;
+
+    height:90px;
+
+    background:#102f59;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+}
+
+.footer-main{
+
+    color:white;
+
+    font-size:14px;
+
+    font-weight:700;
+}
+
+.footer-main span{
+
+    color:#e0b650;
+}
+
+.footer-sub{
+
+    margin-top:4px;
+
+    color:#cbd3df;
+
+    font-size:7px;
+
+    letter-spacing:1.5px;
+}
+
+
+/* =====================================================
+   SIMPLE SIDE ACCENTS
+===================================================== */
+
+.side-line-left{
+
+    position:absolute;
+
+    left:24px;
+
+    top:300px;
+
+    width:2px;
+
+    height:100px;
+
+    background:#d2a248;
+}
+
+.side-line-right{
+
+    position:absolute;
+
+    right:24px;
+
+    top:300px;
+
+    width:2px;
+
+    height:100px;
+
+    background:#d2a248;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+    body{
+        padding:8px;
+    }
+
+    .controls{
+        padding:13px;
+    }
+
+    .header{
+        padding:30px 25px 0;
+    }
+
+    .logo{
+        font-size:22px;
+    }
+
+    .header-right{
+        display:none;
+    }
+
+    .title{
+        margin-top:35px;
+    }
+
+    .congratulations{
+        font-size:43px;
+    }
+
+    .photo-frame{
+        width:175px;
+        height:175px;
+    }
+
+    .photo-area{
+        width:190px;
+
+        margin-top:23px;
+    }
+
+    .name{
+        font-size:23px;
+    }
+
+    .message{
+        width:86%;
+    }
+
+    .message p{
+        font-size:9px;
+    }
+
+    .services{
+        width:84%;
+    }
+
+    .service-title{
+        font-size:6px;
+    }
+
+    .service-sub{
+        font-size:5px;
+    }
+
+    .footer-main{
+        font-size:11px;
+    }
+
+}
+
+
+/* =====================================================
+   PRINT
+===================================================== */
+
+@media print{
+
+    body{
+        padding:0;
+
+        background:#fff;
+    }
+
+    .controls{
+        display:none;
+    }
+
+    .card{
+        box-shadow:none;
+
+        border-radius:0;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =================================================
+     CONTROL PANEL
+================================================= -->
+
+<div class="controls">
+
+    <div class="control">
+
+        <label>
+            👤 সহযাত্রীর নাম
+        </label>
+
+        <input
+            type="text"
+            id="nameInput"
+            placeholder="যেমন: MD JUBAIR BHUYAN"
+            oninput="updateName()"
+        >
+
+    </div>
+
+
+    <div class="control">
+
+        <label>
+            🖼️ ছবি Upload
+        </label>
+
+        <input
+            type="file"
+            id="imageInput"
+            accept="image/*"
+            onchange="updateImage(event)"
+        >
+
+    </div>
+
+
+    <button
+        class="btn save"
+        onclick="saveImage()"
+    >
+        📥 Save Image
+    </button>
+
+
+    <button
+        class="btn print"
+        onclick="window.print()"
+    >
+        🖨️ Print / PDF
+    </button>
+
+</div>
+
+
+
+<!-- =================================================
+     CARD
+===================================================== -->
+
+<div class="card-wrap">
+
+<div
+    class="card"
+    id="welcomeCard"
+>
+
+
+    <!-- Simple Background -->
+
+    <div class="top-bar"></div>
+
+    <div class="top-gold"></div>
+
+    <div class="side-line-left"></div>
+
+    <div class="side-line-right"></div>
+
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+
+           <div> <center><a href="https://ibb.co.com/nMpQPWmz"><img src="https://i.ibb.co.com/b5tNbfmz/logo.jpg" alt="logo" border="0", height="50px", width="100px"></a> </center></div>
+
+
+    </div>
+
+
+
+    <!-- TITLE -->
+
+    <div class="title">
+
+
+        <div class="congratulations">
+            অভিনন্দন
+        </div>
+
+        <div class="line"></div>
+
+        <div class="subtitle">
+            আমাদের নতুন সহযাত্রী
+        </div>
+
+    </div>
+
+
+
+    <!-- PHOTO -->
+
+    <div class="photo-area">
+
+        <div class="photo-frame">
+
+            <div class="photo-inner">
+
+                <div
+                    class="placeholder"
+                    id="placeholder"
+                >
+
+                    <span class="placeholder-icon">
+                        🖼️
+                    </span>
+
+                    <span class="placeholder-text">
+                        UPLOAD PHOTO
+                    </span>
+
+                </div>
+
+
+                <img
+                    id="profileImage"
+                    alt="Sohojatri"
+                >
+
+            </div>
+
+        </div>
+
+
+        <div class="badge">
+            ✓
+        </div>
+
+    </div>
+
+
+
+    <!-- NAME -->
+
+    <div class="name-area">
+
+        <div
+            class="name"
+            id="cardName"
+        >
+            Your Name Here
+        </div>
+
+        <div class="name-line"></div>
+
+        <div class="member">
+            নতুন সহযাত্রী
+        </div>
+
+    </div>
+
+
+
+    <!-- MESSAGE -->
+
+    <div class="message">
+
+        <p>
+
+            আমাদের
+            <strong>Sohojatri Family</strong>-এর
+            নতুন সদস্য হিসেবে যুক্ত হওয়ায়
+            আপনাকে জানাই আন্তরিক অভিনন্দন ও শুভেচ্ছা।
+
+        </p>
+
+
+        <p class="strong-line">
+
+            আপনার নতুন পথচলা হোক সফলতা,
+            সম্ভাবনা ও সুন্দর অভিজ্ঞতায় ভরপুর।
+
+        </p>
+
+
+        <p>
+
+            একসাথে পথ চলি,
+            একসাথে স্বপ্ন ছুঁই! ✈️🌍
+
+        </p>
+
+    </div>
+
+
+
+    <!-- SERVICES -->
+
+    <div class="services">
+
+
+        <div class="service">
+
+            <div class="icon">
+                ✈️
+            </div>
+
+            <div class="service-title">
+                TICKETING
+            </div>
+
+            <div class="service-sub">
+                Fly More
+            </div>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="icon">
+                🌐
+            </div>
+
+            <div class="service-title">
+                VISA
+            </div>
+
+            <div class="service-sub">
+                Explore More
+            </div>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="icon">
+                🏨
+            </div>
+
+            <div class="service-title">
+                HOTEL
+            </div>
+
+            <div class="service-sub">
+                Stay Better
+            </div>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="icon">
+                🧳
+            </div>
+
+            <div class="service-title">
+                TRAVEL
+            </div>
+
+            <div class="service-sub">
+                Go Further
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        <div>
+
+            <div class="footer-main">
+
+                Xjatri | A Concern of X Index Companies <br>
+                Holding No. Kha- 213/2, 213/3 and 213, 5 Bir Uttam Rafiqul Islam Ave, Dhaka 1212
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+</div>
+
+
+
+<script>
+
+/* =====================================================
+   NAME
+===================================================== */
+
+function updateName(){
+
+    let name =
+        document.getElementById("nameInput")
+        .value
+        .trim();
+
+    if(name === ""){
+
+        name = "Your Name Here";
+
+    }
+
+    document.getElementById("cardName")
+        .innerText = name;
+
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+function updateImage(event){
+
+    const file =
+        event.target.files[0];
+
+    if(!file) return;
+
+
+    if(!file.type.startsWith("image/")){
+
+        alert("Please select an image.");
+
+        return;
+
+    }
+
+
+    const reader =
+        new FileReader();
+
+
+    reader.onload =
+        function(e){
+
+            const image =
+                document.getElementById("profileImage");
+
+            image.src =
+                e.target.result;
+
+            image.style.display =
+                "block";
+
+
+            document.getElementById("placeholder")
+                .style.display =
+                "none";
+
+        };
+
+
+    reader.readAsDataURL(file);
+
+}
+
+
+/* =====================================================
+   SAVE IMAGE
+===================================================== */
+
+async function saveImage(){
+
+    const card =
+        document.getElementById("welcomeCard");
+
+
+    const name =
+        document.getElementById("nameInput")
+        .value
+        .trim();
+
+
+    const fileName =
+        name
+        ?
+        "Sohojatri-" +
+        name.replace(/\s+/g,"-") +
+        ".png"
+        :
+        "Sohojatri-Welcome.png";
+
+
+    try{
+
+        const canvas =
+            await html2canvas(
+                card,
+                {
+                    scale:3,
+
+                    useCORS:true,
+
+                    backgroundColor:"#ffffff",
+
+                    logging:false
+                }
+            );
+
+
+        const link =
+            document.createElement("a");
+
+
+        link.download =
+            fileName;
+
+
+        link.href =
+            canvas.toDataURL(
+                "image/png"
+            );
+
+
+        link.click();
+
+    }
+
+    catch(error){
+
+        console.error(error);
+
+        alert(
+            "Image save করতে সমস্যা হয়েছে। আবার চেষ্টা করুন।"
+        );
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
