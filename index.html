@@ -24,11 +24,8 @@
 
 body{
     font-family:'Poppins','Noto Sans Bengali',sans-serif;
-
-    background:#f1f3f6;
-
+    background:#fcf0f5;
     min-height:100vh;
-
     padding:25px 15px;
 }
 
@@ -38,28 +35,17 @@ body{
 ===================================================== */
 
 .controls{
-
     max-width:900px;
-
     margin:0 auto 25px;
-
     padding:18px;
-
     background:#ffffff;
-
-    border:1px solid #e4e7eb;
-
+    border:1px solid #f8bbd0;
     border-radius:14px;
-
     display:flex;
-
     gap:14px;
-
     align-items:end;
-
     flex-wrap:wrap;
-
-    box-shadow:0 8px 25px rgba(0,0,0,.07);
+    box-shadow:0 8px 25px rgba(233, 30, 99, 0.08);
 }
 
 .control{
@@ -68,119 +54,93 @@ body{
 }
 
 .control label{
-
     display:block;
-
     font-size:13px;
-
     font-weight:700;
-
-    color:#17365f;
-
+    color:#ad1457;
     margin-bottom:7px;
 }
 
 .control input{
-
     width:100%;
-
     padding:12px 13px;
-
-    border:1px solid #d9dee6;
-
+    border:1px solid #f48fb1;
     border-radius:9px;
-
     outline:none;
-
     font-family:inherit;
-
     background:#fff;
 }
 
 .control input:focus{
-
-    border-color:#c99a3a;
-
-    box-shadow:
-        0 0 0 3px rgba(201,154,58,.10);
+    border-color:#E91E63;
+    box-shadow:0 0 0 3px rgba(233,30,99,0.15);
 }
 
 .btn{
-
     border:0;
-
     padding:13px 19px;
-
     border-radius:9px;
-
     font-family:inherit;
-
     font-size:13px;
-
     font-weight:700;
-
     cursor:pointer;
-
     transition:.25s;
-
     white-space:nowrap;
 }
 
 .btn:hover{
-
     transform:translateY(-1px);
 }
 
 .save{
-
-    background:#c29332;
-
+    background:#E91E63;
     color:white;
 }
 
 .print{
-
-    background:#102f59;
-
+    background:#880e4f;
     color:white;
 }
 
 
 /* =====================================================
-   CARD
+   CARD & TRAVEL BACKGROUND WATERMARK
 ===================================================== */
 
 .card-wrap{
-
     width:100%;
-
     max-width:900px;
-
     margin:auto;
 }
 
 .card{
-
     position:relative;
-
     width:100%;
-
     max-width:720px;
-
     margin:auto;
-
     aspect-ratio:4/5;
-
     overflow:hidden;
-
-    background:#ffffff;
-
+    background-color:#ffffff;
+    
+    /* ✈️ হালকা বিমানের ওয়াটারমার্ক ব্যাকগ্রাউন্ড (Travel Vectors & Aircraft) */
+    background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23E91E63' fill-opacity='0.045'%3E%3Cpath d='M40 30l15-12-3-2 5-18-8 3-12-9 1 11-11 6 11 3-2 13z'/%3E%3Cpath d='M150 140l20-16-4-2 6-24-11 4-16-12 2 15-15 8 15 4-2 17z'/%3E%3Ccircle cx='100' cy='100' r='60' stroke='%23E91E63' stroke-opacity='0.03' stroke-width='2' stroke-dasharray='6,6' fill='none'/%3E%3Cpath d='M20 160 Q 60 120 100 160 T 180 160' stroke='%23E91E63' stroke-opacity='0.04' stroke-width='2' stroke-dasharray='4,4' fill='none'/%3E%3C/g%3E%3C/svg%3E");
+    
     border-radius:20px;
+    border:1px solid #f8bbd0;
+    box-shadow:0 20px 50px rgba(233, 30, 99, 0.12);
+}
 
-    border:1px solid #e4e5e8;
-
-    box-shadow:
-        0 20px 50px rgba(0,0,0,.14);
+/* মাঝখানের বড় ওয়াটারমার্ক বিমান আইকন */
+.card-watermark-plane {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-30deg);
+    font-size: 320px;
+    color: #E91E63;
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 1;
 }
 
 
@@ -189,33 +149,23 @@ body{
 ===================================================== */
 
 .top-bar{
-
     position:absolute;
-
     top:0;
-
     left:0;
-
     width:100%;
-
     height:8px;
-
-    background:#102f59;
+    background:#880e4f;
+    z-index: 2;
 }
 
 .top-gold{
-
     position:absolute;
-
     top:8px;
-
     left:0;
-
     width:100%;
-
     height:3px;
-
-    background:#d0a044;
+    background:#E91E63;
+    z-index: 2;
 }
 
 
@@ -223,56 +173,28 @@ body{
    HEADER
 ===================================================== */
 
-.header{
-
-    position:relative;
-
-    z-index:2;
-
-    padding:38px 48px 0;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-}
-
 .logo{
-
     font-size:28px;
-
     font-weight:800;
-
-    color:#102f59;
-
+    color:#880e4f;
     letter-spacing:-1px;
 }
 
 .logo span{
-
-    color:#cc1f60;
+    color:#E91E63;
 }
 
 .tagline{
-
     font-size:8px;
-
-    color:#8b929b;
-
+    color:#ad1457;
     letter-spacing:1.5px;
-
     margin-top:-2px;
 }
 
 .header-right{
-
     font-size:9px;
-
     font-weight:700;
-
-    color:#c09537;
-
+    color:#E91E63;
     letter-spacing:1.4px;
 }
 
@@ -282,60 +204,39 @@ body{
 ===================================================== */
 
 .title{
-
     position:relative;
-
-    z-index:2;
-
+    z-index:3;
     text-align:center;
-
     margin-top:45px;
 }
 
 .small-title{
-
     font-size:10px;
-
     letter-spacing:3px;
-
-    color:#9a9fa6;
-
+    color:#c2185b;
     font-weight:600;
 }
 
 .congratulations{
-
     margin-top:4px;
-
     font-family:'Noto Sans Bengali',sans-serif;
-
     font-size:58px;
-
     font-weight:800;
-
     line-height:1.15;
-
-    color:#c91f5d;
+    color:#E91E63;
 }
 
 .line{
-
     width:100px;
-
     height:2px;
-
     margin:10px auto;
-
-    background:#c99b3d;
+    background:#f48fb1;
 }
 
 .subtitle{
-
     font-family:'Noto Sans Bengali',sans-serif;
-
     font-size:14px;
-
-    color:#5d6672;
+    color:#880e4f;
 }
 
 
@@ -344,88 +245,55 @@ body{
 ===================================================== */
 
 .photo-area{
-
     position:relative;
-
     z-index:3;
-
     width:225px;
-
     margin:30px auto 0;
 }
 
 .photo-frame{
-
     width:210px;
-
     height:210px;
-
     margin:auto;
-
     padding:6px;
-
     border-radius:50%;
-
     background:#fff;
-
-    border:2px solid #d1a346;
-
-    box-shadow:
-        0 7px 22px rgba(0,0,0,.10);
+    border:3px solid #E91E63;
+    box-shadow:0 7px 22px rgba(233, 30, 99, 0.15);
 }
 
 .photo-inner{
-
     width:100%;
-
     height:100%;
-
     border-radius:50%;
-
     overflow:hidden;
-
-    background:#f3f5f7;
-
+    background:#fce4ec;
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 }
 
 .photo-inner img{
-
     display:none;
-
     width:100%;
-
     height:100%;
-
     object-fit:cover;
 }
 
 .placeholder{
-
     text-align:center;
-
-    color:#9aa1aa;
+    color:#c2185b;
 }
 
 .placeholder-icon{
-
     display:block;
-
     font-size:42px;
-
     margin-bottom:4px;
 }
 
 .placeholder-text{
-
     font-size:9px;
-
     font-weight:600;
-
     letter-spacing:.5px;
 }
 
@@ -435,35 +303,20 @@ body{
 ===================================================== */
 
 .badge{
-
     position:absolute;
-
     right:2px;
-
     bottom:8px;
-
     width:45px;
-
     height:45px;
-
     border-radius:50%;
-
-    background:#102f59;
-
+    background:#E91E63;
     border:4px solid #fff;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
-    color:#e0b34e;
-
+    color:#fff;
     font-size:18px;
-
-    box-shadow:
-        0 5px 12px rgba(0,0,0,.13);
+    box-shadow:0 5px 12px rgba(0,0,0,.13);
 }
 
 
@@ -472,44 +325,29 @@ body{
 ===================================================== */
 
 .name-area{
-
     position:relative;
-
     z-index:3;
-
     text-align:center;
-
     margin-top:20px;
 }
 
 .name{
-
     font-size:28px;
-
     font-weight:800;
-
-    color:#102f59;
+    color:#880e4f;
 }
 
 .name-line{
-
     width:130px;
-
     height:2px;
-
-    background:#d1a347;
-
+    background:#f48fb1;
     margin:7px auto;
 }
 
 .member{
-
     font-family:'Noto Sans Bengali',sans-serif;
-
-    color:#c91f5d;
-
-    font-size:12px;
-
+    color:#E91E63;
+    font-size:20px;
     font-weight:700;
 }
 
@@ -519,40 +357,27 @@ body{
 ===================================================== */
 
 .message{
-
     position:relative;
-
     z-index:3;
-
     width:78%;
-
     margin:19px auto 0;
-
     text-align:center;
 }
 
 .message p{
-
     font-family:'Noto Sans Bengali',sans-serif;
-
     font-size:12px;
-
     line-height:1.85;
-
-    color:#5a6573;
+    color:#4a148c;
 }
 
 .message strong{
-
-    color:#c91f5d;
+    color:#E91E63;
 }
 
 .message .strong-line{
-
     margin-top:5px;
-
-    color:#18375f;
-
+    color:#880e4f;
     font-weight:700;
 }
 
@@ -562,59 +387,43 @@ body{
 ===================================================== */
 
 .services{
-
     position:relative;
-
     z-index:3;
-
     width:76%;
-
     margin:18px auto 0;
-
     padding:12px 5px;
-
-    border-top:1px solid #e5e6e8;
-
-    border-bottom:1px solid #e5e6e8;
-
+    border-top:1px solid #f8bbd0;
+    border-bottom:1px solid #f8bbd0;
     display:grid;
-
     grid-template-columns:repeat(4,1fr);
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(2px);
+    border-radius: 8px;
 }
 
 .service{
-
     text-align:center;
-
-    border-right:1px solid #e5e6e8;
+    border-right:1px solid #f8bbd0;
 }
 
 .service:last-child{
-
     border-right:none;
 }
 
 .icon{
-
     font-size:18px;
-
     margin-bottom:3px;
 }
 
 .service-title{
-
     font-size:8px;
-
     font-weight:700;
-
-    color:#19375d;
+    color:#880e4f;
 }
 
 .service-sub{
-
     font-size:6px;
-
-    color:#969da5;
+    color:#ad1457;
 }
 
 
@@ -623,50 +432,33 @@ body{
 ===================================================== */
 
 .footer{
-
     position:absolute;
-
     left:0;
-
     bottom:0;
-
     width:100%;
-
     height:90px;
-
-    background:#102f59;
-
+    background:#880e4f;
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     text-align:center;
+    z-index: 3;
 }
 
 .footer-main{
-
     color:white;
-
     font-size:14px;
-
     font-weight:700;
 }
 
 .footer-main span{
-
-    color:#e0b650;
+    color:#f48fb1;
 }
 
 .footer-sub{
-
     margin-top:4px;
-
-    color:#cbd3df;
-
+    color:#fce4ec;
     font-size:7px;
-
     letter-spacing:1.5px;
 }
 
@@ -676,33 +468,23 @@ body{
 ===================================================== */
 
 .side-line-left{
-
     position:absolute;
-
     left:24px;
-
     top:300px;
-
     width:2px;
-
     height:100px;
-
-    background:#d2a248;
+    background:#f48fb1;
+    z-index: 2;
 }
 
 .side-line-right{
-
     position:absolute;
-
     right:24px;
-
     top:300px;
-
     width:2px;
-
     height:100px;
-
-    background:#d2a248;
+    background:#f48fb1;
+    z-index: 2;
 }
 
 
@@ -711,7 +493,6 @@ body{
 ===================================================== */
 
 @media(max-width:600px){
-
     body{
         padding:8px;
     }
@@ -747,7 +528,6 @@ body{
 
     .photo-area{
         width:190px;
-
         margin-top:23px;
     }
 
@@ -778,7 +558,6 @@ body{
     .footer-main{
         font-size:11px;
     }
-
 }
 
 
@@ -787,10 +566,8 @@ body{
 ===================================================== */
 
 @media print{
-
     body{
         padding:0;
-
         background:#fff;
     }
 
@@ -800,10 +577,8 @@ body{
 
     .card{
         box-shadow:none;
-
         border-radius:0;
     }
-
 }
 
 </style>
@@ -812,461 +587,220 @@ body{
 
 <body>
 
-
-<!-- =================================================
-     CONTROL PANEL
-================================================= -->
+<!-- CONTROL PANEL -->
 
 <div class="controls">
-
     <div class="control">
-
-        <label>
-            👤 সহযাত্রীর নাম
-        </label>
-
+        <label>👤 সহযাত্রীর নাম</label>
         <input
             type="text"
             id="nameInput"
             placeholder="যেমন: MD JUBAIR BHUYAN"
             oninput="updateName()"
         >
-
     </div>
 
-
     <div class="control">
-
-        <label>
-            🖼️ ছবি Upload
-        </label>
-
+        <label>🖼️ ছবি Upload</label>
         <input
             type="file"
             id="imageInput"
             accept="image/*"
             onchange="updateImage(event)"
         >
-
     </div>
 
-
-    <button
-        class="btn save"
-        onclick="saveImage()"
-    >
+    <button class="btn save" onclick="saveImage()">
         📥 Save Image
     </button>
 
-
-    <button
-        class="btn print"
-        onclick="window.print()"
-    >
+    <button class="btn print" onclick="window.print()">
         🖨️ Print / PDF
     </button>
-
 </div>
 
 
-
-<!-- =================================================
-     CARD
-===================================================== -->
+<!-- CARD -->
 
 <div class="card-wrap">
+<div class="card" id="welcomeCard">
 
-<div
-    class="card"
-    id="welcomeCard"
->
-
+    <!-- Big Center Watermark Plane Icon -->
+    <div class="card-watermark-plane">✈️</div>
 
     <!-- Simple Background -->
-
     <div class="top-bar"></div>
-
     <div class="top-gold"></div>
-
     <div class="side-line-left"></div>
-
     <div class="side-line-right"></div>
 
-
     <!-- HEADER -->
+    <br>
+    <div style="display: flex; align-items: center; justify-content: flex-start; gap: 20px; padding: 10px; position: relative; z-index: 3;">
+        <div style="display: flex; align-items: center;">
+            <a href="https://ibb.co.com/nMpQPWmz" style="text-decoration: none; display: inline-block;">
+                <img src="https://i.ibb.co.com/b5tNbfmz/logo.jpg" 
+                     alt="Sohojatri Logo" 
+                     style="height: 65px; width: 110px; display: block;">
+            </a>
+        </div>
 
-    <div class="header">
-
-
-           <div> <center><a href="https://ibb.co.com/nMpQPWmz"><img src="https://i.ibb.co.com/b5tNbfmz/logo.jpg" alt="logo" border="0", height="50px", width="100px"></a> </center></div>
-
-
+        <div style="display: flex; align-items: center;">
+            <a href="https://ibb.co.com/nMpQPWmz" style="text-decoration: none; display: inline-block;">
+                <img src="https://i.ibb.co.com/7J1t08h5/iata-logo-png-seeklogo-614827-1.png" 
+                     alt="IATA Logo" 
+                     style="height: 70px; width: 80px; object-fit: contain; display: block;">
+            </a>
+        </div>
     </div>
 
-
-
     <!-- TITLE -->
-
     <div class="title">
-
-
         <div class="congratulations">
             অভিনন্দন
         </div>
-
         <div class="line"></div>
-
         <div class="subtitle">
             আমাদের নতুন সহযাত্রী
         </div>
-
     </div>
-
-
 
     <!-- PHOTO -->
-
     <div class="photo-area">
-
         <div class="photo-frame">
-
             <div class="photo-inner">
-
-                <div
-                    class="placeholder"
-                    id="placeholder"
-                >
-
-                    <span class="placeholder-icon">
-                        🖼️
-                    </span>
-
-                    <span class="placeholder-text">
-                        UPLOAD PHOTO
-                    </span>
-
+                <div class="placeholder" id="placeholder">
+                    <span class="placeholder-icon">🖼️</span>
+                    <span class="placeholder-text">UPLOAD PHOTO</span>
                 </div>
-
-
-                <img
-                    id="profileImage"
-                    alt="Sohojatri"
-                >
-
+                <img id="profileImage" alt="Sohojatri">
             </div>
-
         </div>
 
-
-        <div class="badge">
-            ✓
-        </div>
-
+        <div class="badge">✓</div>
     </div>
-
-
 
     <!-- NAME -->
-
     <div class="name-area">
-
-        <div
-            class="name"
-            id="cardName"
-        >
+        <div class="name" id="cardName">
             Your Name Here
         </div>
-
         <div class="name-line"></div>
-
         <div class="member">
-            নতুন সহযাত্রী
+            ✈️ এখন আমিও বিমান টিকিট বিক্রি করতে পারি
         </div>
-
     </div>
-
-
 
     <!-- MESSAGE -->
-
     <div class="message">
-
         <p>
-
-            আমাদের
-            <strong>Sohojatri Family</strong>-এর
+            আমাদের <strong>Sohojatri Family</strong>-এর
             নতুন সদস্য হিসেবে যুক্ত হওয়ায়
             আপনাকে জানাই আন্তরিক অভিনন্দন ও শুভেচ্ছা।
-
         </p>
-
 
         <p class="strong-line">
-
             আপনার নতুন পথচলা হোক সফলতা,
             সম্ভাবনা ও সুন্দর অভিজ্ঞতায় ভরপুর।
-
         </p>
-
 
         <p>
-
             একসাথে পথ চলি,
             একসাথে স্বপ্ন ছুঁই! ✈️🌍
-
         </p>
-
     </div>
-
-
 
     <!-- SERVICES -->
-
     <div class="services">
-
-
         <div class="service">
-
-            <div class="icon">
-                ✈️
-            </div>
-
-            <div class="service-title">
-                TICKETING
-            </div>
-
-            <div class="service-sub">
-                Fly More
-            </div>
-
+            <div class="icon">✈️</div>
+            <div class="service-title">TICKETING</div>
+            <div class="service-sub">Fly More</div>
         </div>
 
-
         <div class="service">
-
-            <div class="icon">
-                🌐
-            </div>
-
-            <div class="service-title">
-                VISA
-            </div>
-
-            <div class="service-sub">
-                Explore More
-            </div>
-
+            <div class="icon">🌐</div>
+            <div class="service-title">VISA</div>
+            <div class="service-sub">Explore More</div>
         </div>
 
-
         <div class="service">
-
-            <div class="icon">
-                🏨
-            </div>
-
-            <div class="service-title">
-                HOTEL
-            </div>
-
-            <div class="service-sub">
-                Stay Better
-            </div>
-
+            <div class="icon">🏨</div>
+            <div class="service-title">HOTEL</div>
+            <div class="service-sub">Stay Better</div>
         </div>
 
-
         <div class="service">
-
-            <div class="icon">
-                🧳
-            </div>
-
-            <div class="service-title">
-                TRAVEL
-            </div>
-
-            <div class="service-sub">
-                Go Further
-            </div>
-
+            <div class="icon">🧳</div>
+            <div class="service-title">TRAVEL</div>
+            <div class="service-sub">Go Further</div>
         </div>
-
-
     </div>
-
-
 
     <!-- FOOTER -->
-
     <div class="footer">
-
         <div>
-
             <div class="footer-main">
-
-                Xjatri | A Concern of X Index Companies <br>
+                Xjatri | A Part of XIC <br>
                 Holding No. Kha- 213/2, 213/3 and 213, 5 Bir Uttam Rafiqul Islam Ave, Dhaka 1212
-
             </div>
-
         </div>
-
     </div>
 
-
 </div>
-
 </div>
-
-
 
 <script>
 
-/* =====================================================
-   NAME
-===================================================== */
-
 function updateName(){
-
-    let name =
-        document.getElementById("nameInput")
-        .value
-        .trim();
-
+    let name = document.getElementById("nameInput").value.trim();
     if(name === ""){
-
         name = "Your Name Here";
-
     }
-
-    document.getElementById("cardName")
-        .innerText = name;
-
+    document.getElementById("cardName").innerText = name;
 }
-
-
-/* =====================================================
-   IMAGE
-===================================================== */
 
 function updateImage(event){
-
-    const file =
-        event.target.files[0];
-
+    const file = event.target.files[0];
     if(!file) return;
 
-
     if(!file.type.startsWith("image/")){
-
         alert("Please select an image.");
-
         return;
-
     }
 
-
-    const reader =
-        new FileReader();
-
-
-    reader.onload =
-        function(e){
-
-            const image =
-                document.getElementById("profileImage");
-
-            image.src =
-                e.target.result;
-
-            image.style.display =
-                "block";
-
-
-            document.getElementById("placeholder")
-                .style.display =
-                "none";
-
-        };
-
-
+    const reader = new FileReader();
+    reader.onload = function(e){
+        const image = document.getElementById("profileImage");
+        image.src = e.target.result;
+        image.style.display = "block";
+        document.getElementById("placeholder").style.display = "none";
+    };
     reader.readAsDataURL(file);
-
 }
 
-
-/* =====================================================
-   SAVE IMAGE
-===================================================== */
-
 async function saveImage(){
-
-    const card =
-        document.getElementById("welcomeCard");
-
-
-    const name =
-        document.getElementById("nameInput")
-        .value
-        .trim();
-
-
-    const fileName =
-        name
-        ?
-        "Sohojatri-" +
-        name.replace(/\s+/g,"-") +
-        ".png"
-        :
-        "Sohojatri-Welcome.png";
-
+    const card = document.getElementById("welcomeCard");
+    const name = document.getElementById("nameInput").value.trim();
+    const fileName = name ? "Sohojatri-" + name.replace(/\s+/g,"-") + ".png" : "Sohojatri-Welcome.png";
 
     try{
+        const canvas = await html2canvas(card, {
+            scale:3,
+            useCORS:true,
+            backgroundColor:"#ffffff",
+            logging:false
+        });
 
-        const canvas =
-            await html2canvas(
-                card,
-                {
-                    scale:3,
-
-                    useCORS:true,
-
-                    backgroundColor:"#ffffff",
-
-                    logging:false
-                }
-            );
-
-
-        const link =
-            document.createElement("a");
-
-
-        link.download =
-            fileName;
-
-
-        link.href =
-            canvas.toDataURL(
-                "image/png"
-            );
-
-
+        const link = document.createElement("a");
+        link.download = fileName;
+        link.href = canvas.toDataURL("image/png");
         link.click();
-
     }
-
     catch(error){
-
         console.error(error);
-
-        alert(
-            "Image save করতে সমস্যা হয়েছে। আবার চেষ্টা করুন।"
-        );
-
+        alert("Image save করতে সমস্যা হয়েছে। আবার চেষ্টা করুন।");
     }
-
 }
 
 </script>
